@@ -1,0 +1,32 @@
+@supports (grid-gap: 1rem) {
+  body {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:
+      1fr 18fr 1fr;
+    grid-template-rows:
+      1fr auto;
+    grid-template-areas:
+      '.    cont .   '
+      'foot foot foot';
+  }
+
+  main {
+    grid-area: cont;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  footer {
+    grid-area: foot;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-flow: row wrap;
+}

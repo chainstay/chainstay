@@ -1,0 +1,27 @@
+@supports (grid-gap: 1rem) {
+  #mainIndex {
+    grid-template-areas:
+      'dsgn'
+      'arch'
+      'dock'
+      'cloud';
+  }
+  .section {
+    &.design {
+      grid-area: dsgn;
+    }
+    &.architecture {
+      grid-area: arch;
+    }
+    &.docker {
+      grid-area: dock;
+    }
+    &.cloud {
+      grid-area: cloud;
+    }
+  }
+}
+
+.section {
+  background-color: lightblue;
+}

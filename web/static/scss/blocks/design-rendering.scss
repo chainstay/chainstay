@@ -1,0 +1,130 @@
+.design-render {
+  display: none;
+}
+
+$render-base: 1rem;
+$render-section-base: $render-base * 2;
+$render-base-height: $render-base;
+$render-base-width: $render-base * 4;
+
+@supports (grid-gap: 1rem) {
+  .design-render {
+    display: grid;
+    align-content: start;
+    grid-gap: 0.2rem;
+
+    margin: 1rem;
+    @media (min-width: 350px) {
+      margin: 1.5rem;
+    }
+
+    &-wrapper {
+      display: inherit;
+      flex-flow: inherit;
+      margin: auto;
+
+      @media (min-width: 370px) {
+        max-width: 19rem;
+      }
+    }
+
+    &-mobile {
+      flex-basis: 20%;
+      flex-shrink: 0;
+      grid-template-rows:
+        auto 1rem 2.3rem 0.5rem 1rem 0.5rem 1rem;
+      grid-template-areas:
+        'fig'
+        'sec-1'
+        'sec-2'
+        'sec-3'
+        'sec-4'
+        'sec-5'
+        'sec-6'
+    }
+    &-tablet {
+      flex-basis: 30%;
+      flex-grow: 1;
+      grid-template-columns:
+        repeat(4, 6fr);
+      grid-template-rows:
+        auto 2rem 4rem 2rem;
+      grid-template-areas:
+        'fig   fig   fig   fig'
+        'sec-1 sec-1 sec-1 sec-2'
+        'sec-3 sec-3 sec-3 sec-2'
+        'sec-4 sec-4 sec-5 sec-5'
+    }
+    &-desktop {
+      flex-basis: 100%;
+      flex-grow: 1;
+      grid-gap: 0.5rem;
+      grid-template-columns: repeat(4, 1fr) 2rem 2rem;
+      grid-template-rows:
+        auto repeat(3, 2rem) repeat(3, 1rem);
+      grid-template-areas:
+        'fig   fig   fig   fig   fig   fig'
+        'sec-1 sec-1 sec-1 sec-1 sec-2 sec-3'
+        'sec-1 sec-1 sec-1 sec-1 sec-4 sec-5'
+        'sec-1 sec-1 sec-1 sec-1 sec-6 sec-7'
+        'sec-8 sec-8 sec-8 sec-8 sec-9 sec-9'
+        'sec-10 sec-10 sec-10 sec-10 sec-9 sec-9'
+        'sec-11 sec-11 sec-11 sec-11 sec-9 sec-9'
+    }
+
+    &-figure {
+      grid-area: fig;
+      text-align: center;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    .render {
+      background-color: lightcoral;
+      display: flex;
+      flex-basis: 100%;
+      flex-grow: 1;
+      //&-header {
+      //  grid-area: hd;
+      //}
+      &-section {
+        &-one {
+          grid-area: sec-1;
+        }
+        &-two {
+          grid-area: sec-2;
+        }
+        &-three {
+          grid-area: sec-3;
+        }
+        &-four {
+          grid-area: sec-4;
+        }
+        &-five {
+          grid-area: sec-5;
+        }
+        &-six {
+          grid-area: sec-6;
+        }
+        &-seven {
+          grid-area: sec-7;
+        }
+        &-eight {
+          grid-area: sec-8;
+        }
+        &-nine {
+          grid-area: sec-9;
+        }
+        &-ten {
+          grid-area: sec-10;
+        }
+        &-eleven {
+          grid-area: sec-11;
+        }
+      }
+      &-footer {
+        grid-area: ft;
+      }
+    }
+  }
+}
