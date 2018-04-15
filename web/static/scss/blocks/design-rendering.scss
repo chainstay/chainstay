@@ -77,10 +77,10 @@
       grid-template-rows:
         repeat(4, 2rem);
       grid-template-areas:
-        'sec-fend sec-fend sec-fend'
-        'sec-api  sec-api  sec-api'
-        'sec-user sec-paym sec-recs'
-        'sec-db1  sec-db2  sec-db3';
+        'sec-fend sec-fend sec-fend label-fend'
+        'sec-api  sec-api  sec-api  label-api'
+        'sec-user sec-paym sec-recs label-serv'
+        'sec-db1  sec-db2  sec-db3  label-dbs';
     }
 
     &-figure {
@@ -90,13 +90,31 @@
       font-style: italic;
     }
 
+    .label {
+      display: flex;
+      align-items: center;
+
+      &-front-end {
+        grid-area: label-fend;
+      }
+      &-web-api {
+        grid-area: label-api;
+      }
+      &-services {
+        grid-area: label-serv;
+      }
+      &-databases {
+        grid-area: label-dbs;
+      }
+    }
+
     .render {
       background-color: lightcoral;
       display: flex;
       flex-basis: 100%;
       flex-grow: 1;
       &-db {
-        $db-icon-border: 1px solid lightgray;
+        $db-icon-border: 1px solid lightblue;
         // Make database icons appear as cylinders
         border-radius: 50%/25%;
         border: $db-icon-border;
