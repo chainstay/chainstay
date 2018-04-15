@@ -8,16 +8,16 @@
     align-content: start;
     grid-gap: 0.2rem;
 
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     @media (min-width: 350px) {
-      margin: 1.5rem;
+      margin: 0 1.5rem 1.5rem 1.5rem;
     }
 
     &-wrapper {
       flex-basis: 100%;
       display: inherit;
       flex-flow: inherit;
-      margin: auto;
+      margin: 0 auto;  // justify self to center
 
       &-design {
         @media (min-width: 370px) {

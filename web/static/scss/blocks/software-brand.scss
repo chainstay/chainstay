@@ -1,0 +1,18 @@
+.software-brand {
+  display: flex;
+  flex-basis: 100%;
+
+  &-img-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    flex: 1 0 30%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-description {
+    flex: 0 1 70%;
+  }
+}
