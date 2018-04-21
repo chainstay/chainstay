@@ -14,21 +14,22 @@
     align-content: start;
     grid-gap: 0.2rem;
 
-    margin: 0 1rem 1rem 1rem;
-
-    @media (min-width: 350px) {
-      margin: 0 1.5rem 1.5rem 1.5rem;
-    }
+    margin-bottom: 1rem;
 
     &-wrapper {
       flex-basis: 100%;
       display: inherit;
       flex-flow: inherit;
       margin: 0 auto;  // justify self to center
+      justify-content: space-between;
 
       &-design {
-        @media (min-width: 370px) {
-          max-width: 19rem;
+        @media (min-width: 370px) and (max-width: 600px) {
+          max-width: 19rem;  // current width at 370px
+        }
+
+        @media (min-width: 700px) {
+          max-width: 38rem;  // current width at 700px
         }
       }
     }
@@ -41,14 +42,18 @@
       font-size: 1rem;
     }
 
+    $row-base: 1rem;
     &-mobile {
       .design-render-figure:before {
         content: fa-content($fa-var-mobile-alt);
       }
-      flex-basis: 20%;
+      flex-basis: 25%;
+      @media (min-width: 600px) {
+        flex-basis: 10%
+      }
       flex-shrink: 0;
       grid-template-rows:
-        auto 1rem 2.3rem 0.5rem 1rem 0.5rem 1rem;
+        auto 1rem 3rem 0.5rem 1rem 0.5rem 1rem;
       grid-template-areas:
         'fig'
         'sec-1'
@@ -63,10 +68,12 @@
       .design-render-figure:before {
         content: fa-content($fa-var-tablet-alt);
       }
-      flex-basis: 30%;
-      flex-grow: 1;
+      flex-basis: 60%;
+      @media (min-width: 600px) {
+        flex-basis: 25%
+      }
       grid-template-rows:
-        auto 2rem 4rem 2rem;
+        auto 2.8rem 5rem 2.8rem;
       grid-template-areas:
         'fig   fig   fig   fig'
         'sec-1 sec-1 sec-1 sec-2'
@@ -79,14 +86,18 @@
         content: fa-content($fa-var-desktop);
       }
       flex-basis: 100%;
+      @media (min-width: 600px) {
+        flex-basis: 50%;
+      }
       grid-template-columns: repeat(4, 1fr) 2rem 2rem;
       grid-template-rows:
-        auto repeat(3, 2rem) repeat(3, 1rem);
+        auto repeat(4, 2rem) repeat(3, 1rem);
       grid-template-areas:
         'fig   fig   fig   fig   fig   fig'
         'sec-1 sec-1 sec-1 sec-1 sec-2 sec-3'
         'sec-1 sec-1 sec-1 sec-1 sec-4 sec-5'
         'sec-1 sec-1 sec-1 sec-1 sec-6 sec-7'
+        'sec-1 sec-1 sec-1 sec-1 sec-12 sec-13'
         'sec-8 sec-8 sec-8 sec-8 sec-9 sec-9'
         'sec-10 sec-10 sec-10 sec-10 sec-9 sec-9'
         'sec-11 sec-11 sec-11 sec-11 sec-9 sec-9';
@@ -199,6 +210,12 @@
         }
         &-eleven {
           grid-area: sec-11;
+        }
+        &-twelve {
+          grid-area: sec-12;
+        }
+        &-thirteen {
+          grid-area: sec-13;
         }
         &-front-end {
           @include grad-up-right(get-color(yellow, dark), get-color(yellow, light));
