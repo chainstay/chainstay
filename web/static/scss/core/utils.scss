@@ -1,0 +1,9 @@
+// Wraps a div to center it horizontally without using margins
+.justify-self {
+  display: flex;
+  flex: 1 0 100%;
+
+  &-center {
+    justify-content: center;
+  }
+}
