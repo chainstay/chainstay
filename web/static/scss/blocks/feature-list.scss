@@ -1,0 +1,19 @@
+@import "../core/typography";
+
+.feature-list {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+
+  margin: 1rem;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}

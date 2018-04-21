@@ -1,18 +1,45 @@
 .software-brand {
   display: flex;
+  flex-flow: row wrap;
   flex-basis: 100%;
+  margin: 0 1rem 1rem 1rem;
 
   &-img-wrapper {
     display: flex;
     align-items: center;
     margin: 1rem;
-    flex: 1 0 30%;
+
     img {
       width: 100%;
     }
   }
 
   &-description {
-    flex: 0 1 70%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    flex: 1 1 50%;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.img-sm {
+  flex: 0 0 20%;
+}
+
+.img-med {
+  flex: 0 0 50%;
+}
+
+.img-lg {
+  flex: 0 0 100%;
+}
+
+.brand-image {
+  &-docker {
+    width: 100%;
   }
 }
