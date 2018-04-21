@@ -1,3 +1,6 @@
+@import "../core/colors";
+@import "../mixins/gradients";
+
 .design-render {
   display: none;
 }
@@ -112,7 +115,7 @@
       flex-basis: 100%;
       flex-grow: 1;
       &-db {
-        $db-icon-border: 1px solid lightblue;
+        $db-icon-border: 1px solid $bg-color;
         // Make database icons appear as cylinders
         border-radius: 50%/25%;
         border: $db-icon-border;
@@ -124,6 +127,22 @@
           border-radius: 50%;
           content: '';  // display of circle border
           border: $db-icon-border;
+        }
+      }
+
+      &.color {
+        &-main {
+          @include grad-up-right(get-color(blue, light), get-color(green, light));
+        }
+        &-nav {
+          background-color: get-color(orange, light);
+        }
+        &-content {
+          background-color: get-color(purple, light)
+          //@include grad-up-right(get-color(purple), get-color(orange));
+        }
+        &-aside {
+          background-color: get-color(blue, light);
         }
       }
 
@@ -162,27 +181,35 @@
           grid-area: sec-11;
         }
         &-front-end {
+          @include grad-up-right(get-color(yellow, dark), get-color(yellow, light));
           grid-area: sec-fend;
         }
         &-api {
+          @include grad-up-right(get-color(orange, dark), get-color(orange, light));
           grid-area: sec-api;
         }
         &-user-service {
+          @include grad-up-right(get-color(purple, light), get-color(white, dark));
           grid-area: sec-user;
         }
         &-payment-service {
+          @include grad-up-right(get-color(purple), get-color(white, dark));
           grid-area: sec-paym;
         }
         &-recommendation-service {
+          @include grad-up-right(get-color(purple, dark), get-color(white, dark));
           grid-area: sec-recs;
         }
         &-db-one {
+          @include grad-up-right(get-color(blue, light), get-color(white, dark));
           grid-area: sec-db1;
         }
         &-db-two {
+          @include grad-up-right(get-color(blue), get-color(white, dark));
           grid-area: sec-db2;
         }
         &-db-three {
+          @include grad-up-right(get-color(blue, dark), get-color(white, dark));
           grid-area: sec-db3;
         }
       }

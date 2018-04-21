@@ -1,0 +1,4 @@
+@mixin grad-up-right($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to top right, $start-color $start-percent, $end-color $end-percent);
+  background-repeat: repeat-x;
+}

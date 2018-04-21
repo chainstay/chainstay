@@ -1,6 +1,9 @@
 @import "core/resets";
 @import "core/layout";
 @import "core/typography";
+@import "core/colors";
+
+@import "mixins/gradients";
 
 @import "blocks/design-rendering";
 @import "blocks/software-brand";

@@ -1,0 +1,41 @@
+$white: #fff !default;
+$blue: #39528D !default;
+$purple: #6D348D !default;
+$red: #D34747 !default;
+$orange: #D3A447 !default;
+$yellow: #D3D347 !default;
+$green: #39A939 !default;
+$black: #000 !default;
+
+$colors-map: (
+  white: $white,
+  blue: $blue,
+  purple: $purple,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  black: $black,
+);
+
+$darken: 5% !default;
+$lighten: 15% !default;
+$colors: ();
+@each $color, $value in $colors-map {
+  $colors: map-merge((
+    $color: (
+      base: $value,
+      light: lighten($value, $lighten),
+      dark: darken($value, $darken),
+    )
+  ), $colors);
+}
+
+@function get-color($color: $black, $offset: base) {
+  @return map-get(map-get($colors, $color), $offset)
+}
+
+$bg-color: get-color(white, dark) !default;
+body {
+  background-color: $bg-color
+}

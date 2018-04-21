@@ -1,7 +1,6 @@
 @supports (grid-gap: 1rem) {
   body {
     display: grid;
-    grid-gap: 1rem;
     grid-template-columns:
       1fr 18fr 1fr;
     grid-template-rows:
