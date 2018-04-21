@@ -91,7 +91,6 @@
     }
 
     .label {
-      display: flex;
       align-items: center;
 
       &-front-end {
@@ -110,7 +109,6 @@
 
     .render {
       background-color: lightcoral;
-      display: flex;
       flex-basis: 100%;
       flex-grow: 1;
       &-db {

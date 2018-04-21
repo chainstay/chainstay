@@ -1,0 +1,43 @@
+$contact-img-max-size: 8rem;
+$contact-inner-margin: 0.5rem;
+
+.contact-card {
+  margin-bottom: 2rem;
+  flex-basis: 100%;
+  justify-content: center;
+
+  &-img-wrapper {
+    margin-right: $contact-inner-margin;
+
+    img {
+      max-width: $contact-img-max-size;
+      max-height: $contact-img-max-size;
+      border-radius: 50% 5% 50% 25%;
+    }
+  }
+
+  &-info {
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+
+    small {
+      margin-bottom: $contact-inner-margin;
+    }
+
+    ul {
+      margin-bottom: $contact-inner-margin;
+
+      li {
+        &:not(:last-of-type):after {
+          content: "|";
+          margin: 0 $contact-inner-margin;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

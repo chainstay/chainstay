@@ -43,7 +43,7 @@ for (var size in img_sizes) {
     var taskName = 'resize_' + size;
     function createTask(taskName, img_size, width) {
         gulp.task(taskName, function() {
-            var src = path.join(rootPath, './static', '**', 'img/src');
+            var src = path.join(rootPath, '**', 'static', '**', 'imgs', 'src');
             return gulp.src(path.join(src, '*.jpg'), {base: '.'})
                 .pipe(imageResize({
                     width: width,

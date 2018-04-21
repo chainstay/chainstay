@@ -1,11 +1,8 @@
 .software-brand {
-  display: flex;
-  flex-flow: row wrap;
   flex-basis: 100%;
   margin: 0 1rem 1rem 1rem;
 
   &-img-wrapper {
-    display: flex;
     align-items: center;
     margin: 1rem;
 
@@ -15,8 +12,6 @@
   }
 
   &-description {
-    display: flex;
-    flex-flow: row wrap;
     align-content: center;
     flex: 1 1 50%;
 
