@@ -1,9 +1,6 @@
 @import "../core/colors";
 @import "../mixins/gradients";
 
-@import "../libs/font-awesome/fontawesome";
-@import "../libs/font-awesome/fa-solid";
-
 .design-render {
   display: none;
 }
@@ -32,25 +29,14 @@
         }
       }
       &-architecture {
-        @media (min-width: 500px) {
-          max-width: 28rem;
+        @media (min-width: 400px) {
+          max-width: 21rem;
         }
       }
     }
 
-    // Implement necessary styles to render the design figure as an icon
-    .design-render-figure {
-      @include fa-icon;
-      @extend .fas;
-      text-align: left;
-      font-size: 1rem;
-    }
-
     $row-base: 1rem;
     &-mobile {
-      .design-render-figure:before {
-        content: fa-content($fa-var-mobile-alt);
-      }
       flex-basis: 25%;
       @media (min-width: 600px) {
         flex-basis: 10%
@@ -69,9 +55,6 @@
     }
 
     &-tablet {
-      .design-render-figure:before {
-        content: fa-content($fa-var-tablet-alt);
-      }
       flex-basis: 60%;
       @media (min-width: 600px) {
         flex-basis: 25%
@@ -86,9 +69,6 @@
     }
 
     &-desktop {
-      .design-render-figure:before {
-        content: fa-content($fa-var-desktop);
-      }
       flex-basis: 100%;
       @media (min-width: 600px) {
         flex-basis: 50%;
@@ -124,18 +104,10 @@
         grid-template-rows:
           repeat(4, 3rem);
       }
-      @media (min-width: 446px) {
-        grid-template-rows:
-          repeat(4, 4rem);
-      }
-
     }
 
     &-figure {
       grid-area: fig;
-      text-align: center;
-      font-size: 0.8rem;
-      font-style: italic;
     }
 
     .label {

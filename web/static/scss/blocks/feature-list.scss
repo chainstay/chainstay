@@ -3,8 +3,6 @@
 .feature-list {
   flex-basis: 100%;
 
-  margin: 1rem;
-
   ul {
     list-style: none;
   }
@@ -13,5 +11,9 @@
     &:not(:last-of-type) {
       margin-bottom: 1rem;
     }
+  }
+
+  .header-icons {
+    flex-basis: 100%;
   }
 }

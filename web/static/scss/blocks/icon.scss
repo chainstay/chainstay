@@ -1,0 +1,30 @@
+@import "../libs/font-awesome/fontawesome";
+@import "../libs/font-awesome/fa-solid";
+@import "../libs/font-awesome/fa-brands";
+
+$icon-var-map: (
+  aws: $fa-var-aws,
+  mobile: $fa-var-mobile-alt,
+  tablet: $fa-var-tablet-alt,
+  desktop: $fa-var-desktop,
+  azure: $fa-var-windows,
+  gcp: $fa-var-google,
+  cloud: $fa-var-cloud,
+);
+
+.icon {
+  &-brand {
+    @include fa-icon;
+    @extend .fab;
+  }
+  &-solid {
+    @include fa-icon;
+    @extend .fas;
+  }
+
+  @each $id, $var in $icon-var-map {
+    &-#{$id}:before {
+      content: fa-content($var);
+    }
+  }
+}

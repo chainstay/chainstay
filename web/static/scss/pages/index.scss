@@ -3,8 +3,8 @@
     grid-template-areas:
       'dsgn'
       'arch'
-      'dock'
-      'cloud';
+      'cloud'
+      'contact';
   }
   .section {
     &.design {
@@ -13,11 +13,11 @@
     &.architecture {
       grid-area: arch;
     }
-    &.docker {
-      grid-area: dock;
-    }
     &.cloud {
       grid-area: cloud;
+    }
+    &.contact {
+      grid-area: contact;
     }
   }
 }

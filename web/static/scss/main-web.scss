@@ -6,11 +6,12 @@
 
 @import "mixins/gradients";
 
-@import "blocks/design-rendering";
-@import "blocks/software-brand";
-@import "blocks/description";
-@import "blocks/feature-list";
 @import "blocks/contact-card";
+@import "blocks/description";
+@import "blocks/design-rendering";
+@import "blocks/feature-list";
+@import "blocks/icon";
+@import "blocks/software-brand";
 
 @import "pages/index";
 
