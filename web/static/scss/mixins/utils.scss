@@ -1,0 +1,9 @@
+// Returns the required size of an item, if $num-per items
+// were to fit within $available space.
+//
+// Example sage:
+//  flex-basis: items-per-row(3) -> 30%
+//  width: items-per-row(2, 5rem) -> 2.5rem
+@function items-per-row($num-per, $available-space:90%) {
+  @return $available-space / $num-per;
+}

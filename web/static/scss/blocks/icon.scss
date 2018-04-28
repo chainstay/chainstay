@@ -4,12 +4,14 @@
 
 $icon-var-map: (
   aws: $fa-var-aws,
+  azure: $fa-var-windows,
+  cloud: $fa-var-cloud,
+  check: $fa-var-check,
+  code: $fa-var-file-code,
+  desktop: $fa-var-desktop,
+  gcp: $fa-var-google,
   mobile: $fa-var-mobile-alt,
   tablet: $fa-var-tablet-alt,
-  desktop: $fa-var-desktop,
-  azure: $fa-var-windows,
-  gcp: $fa-var-google,
-  cloud: $fa-var-cloud,
 );
 
 .icon {

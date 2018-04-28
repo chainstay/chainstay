@@ -1,0 +1,35 @@
+@import "../core/colors";
+
+@import "../mixins/gradients";
+
+.section {
+  padding: 4rem 2rem;
+
+  &.design {
+    z-index: 2;
+    @include grad-up-right(get-color(red, light), get-color(orange, light));
+    transform: skew(0, 10deg);
+    .border-wrapper {
+      transform: skew(0, -10deg);
+    }
+  }
+
+  &.frameworks {
+    z-index: 1;
+    padding-top: 8rem;
+    @include grad-up-right(lighten($blue, 50%), lighten($blue, 20%));
+    transform: skew(0, -20deg);
+    .border-wrapper {
+      transform: skew(0, 20deg);
+    }
+  }
+
+  &.cloud {
+    z-index: 2;
+    @include grad-up-right(lighten($green, 40%), lighten($green, 20%));
+    transform: skew(0, 10deg);
+    .border-wrapper {
+      transform: skew(0, -10deg);
+    }
+  }
+}
