@@ -2,7 +2,7 @@
 
 .feature-list {
   flex-basis: 100%;
-  h1, h2, h3, h4, {
+  h1, h2, h3, h4 {
     margin-bottom: 1rem;
   }
 
@@ -16,21 +16,6 @@
     }
     p {
       margin-bottom: 1rem;
-    }
-  }
-
-  .banner-icons {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-
-    .icon {
-      flex-basis: 20%;
     }
   }
 }

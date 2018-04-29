@@ -1,3 +1,5 @@
+@import "../mixins/utils";
+
 .software-brand {
   align-items: center;
   flex-basis: 100%;
@@ -5,15 +7,24 @@
 
   &-icon {
     font-size: 3rem;
-    width: 4rem;  // Icons should be fixed width
+    flex: 0 0 4rem;  // Icons should be fixed width
     margin: 0 1rem 0 0;
   }
 
   &-description {
     align-content: center;
-    flex: 1 1 50%;
+    flex: 1 1 100%;
 
-    h3 {
+    @media (min-width: 500px) {
+      flex-basis: 50%;
+    }
+
+    h3, small {
+      flex-basis: 100%;
+
+    }
+
+    small {
       margin-bottom: 0.5rem;
     }
   }
