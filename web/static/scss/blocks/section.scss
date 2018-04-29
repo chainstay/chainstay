@@ -17,6 +17,7 @@
   &.frameworks {
     z-index: 1;
     padding-top: 8rem;
+    padding-bottom: 8rem;
     @include grad-up-right(lighten($blue, 50%), lighten($blue, 20%));
     transform: skew(0, -20deg);
     .border-wrapper {
