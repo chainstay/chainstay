@@ -3,10 +3,11 @@
 @import "../libs/font-awesome/fa-brands";
 
 $icon-var-map: (
+  arrow-down: $fa-var-angle-double-down,
   aws: $fa-var-aws,
   azure: $fa-var-windows,
   cloud: $fa-var-cloud,
-  check: $fa-var-check,
+  check: $fa-var-check-circle,
   code: $fa-var-file-code,
   desktop: $fa-var-desktop,
   docker: $fa-var-docker,
@@ -14,6 +15,7 @@ $icon-var-map: (
   mobile: $fa-var-mobile-alt,
   react: $fa-var-react,
   tablet: $fa-var-tablet-alt,
+  truck: $fa-var-shipping-fast,
   python: $fa-var-python,
 );
 
@@ -31,5 +33,12 @@ $icon-var-map: (
     &-#{$id}:before {
       content: fa-content($var);
     }
+  }
+}
+
+.icon-group {
+  &-cloud {
+    font-size: 3rem;
+    flex-flow: column;
   }
 }

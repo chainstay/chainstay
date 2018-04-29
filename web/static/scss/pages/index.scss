@@ -15,6 +15,36 @@
     }
     &.cloud {
       grid-area: cloud;
+      .border-wrapper {
+        display: grid;
+        grid-template-areas:
+          'desc'
+          'list';
+        @media (min-width: 400px) {
+          grid-template-columns:
+            1fr 0.3fr;
+          grid-template-areas:
+            'desc desc'
+            'list icons';
+        }
+        .description-cloud {
+          grid-area: desc;
+        }
+        .feature-list-cloud {
+          grid-area: list;
+        }
+        .icon-group-cloud {
+          display: none;
+
+          @media (min-width: 400px) {
+            display: flex;
+            grid-area: icons;
+            align-content: center;
+            align-items: center;
+            justify-content: space-around;
+          }
+        }
+      }
     }
     &.contact {
       grid-area: contact;
