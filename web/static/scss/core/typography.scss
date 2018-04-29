@@ -1,14 +1,18 @@
-@mixin header-2 {
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
 
-@mixin header-3 {
+h3 {
   font-size: 1.5rem;
   margin-bottom: 0.3rem;
 }
 
-@mixin header-4 {
+h4 {
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
@@ -23,18 +27,6 @@
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-}
-
-h2 {
-  @include header-2;
-}
-
-h3 {
-  @include header-3;
-}
-
-h4 {
-  @include header-4;
 }
 
 .header-centered {
