@@ -1,8 +1,10 @@
+@import "variables";
+
 @supports (grid-gap: 1rem) {
   body {
     display: grid;
     grid-template-rows:
-      40vh auto auto;
+      45vh auto 80vh;
     grid-template-areas:
       'head'
       'cont'
@@ -20,11 +22,25 @@
 
   footer {
     grid-area: foot;
+    align-content: center;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
   }
 }
 
 body {
   min-height: 100vh;
+}
+
+html {
+  @media (min-width: 1200px) {
+    font-size: $base-font-size * 1.2;
+  }
+  @media (min-width: 2000px) {
+    font-size: $base-font-size * 1.4;
+  }
 }
 
 .section {

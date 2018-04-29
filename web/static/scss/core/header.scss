@@ -1,4 +1,18 @@
+@import "../core/variables";
+
 header {
-  display: block;
-  padding: 2rem;
+  z-index: 10;
+
+  @media (min-width: $width-constrain-main) {
+    justify-content: center;
+  }
+
+  .title-wrapper {
+    display: block;
+    padding: 2rem;
+
+    @media (min-height: 700px) {
+      margin: auto;
+    }
+  }
 }

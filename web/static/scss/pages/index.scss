@@ -3,8 +3,7 @@
     grid-template-areas:
       'dsgn'
       'arch'
-      'cloud'
-      'contact';
+      'cloud';
   }
   .section {
     &.design {
@@ -45,9 +44,6 @@
           }
         }
       }
-    }
-    &.contact {
-      grid-area: contact;
     }
   }
 }
