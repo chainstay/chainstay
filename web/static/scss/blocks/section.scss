@@ -1,44 +1,31 @@
 @import "../core/colors";
 
 @import "../mixins/gradients";
+@import "../mixins/transformations";
 
 .section {
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   justify-content: center;
 
-  .border-wrapper {
+  .stripe-offset {
     max-width: 43rem;
   }
 
   &.design {
-    padding-bottom: 6rem;
+    @include diagonal-background(10deg, -2rem, -2rem);
+    @include grad-up-right(lighten($blue, 50%), lighten($blue, 20%));
     z-index: 2;
-    @include grad-up-right(get-color(red, light), get-color(orange, light));
-    transform: skew(0, 10deg);
-    .border-wrapper {
-      transform: skew(0, -10deg);
-    }
   }
 
   &.frameworks {
-    padding-top: 11rem;
-    padding-bottom: 10rem;
-    @include grad-up-right(lighten($blue, 50%), lighten($blue, 20%));
-    transform: skew(0, -20deg);
+    @include diagonal-background(-20deg, 5rem, 5rem);
+    @include grad-up-right(get-color(red, light), get-color(orange, light));
     z-index: 1;
-    .border-wrapper {
-      transform: skew(0, 20deg);
-    }
   }
 
   &.cloud {
-    padding-bottom: 8rem;
-    padding-top: 6rem;
+    @include diagonal-background(10deg);
     @include grad-up-right(lighten($green, 40%), lighten($green, 20%));
-    transform: skew(0, 10deg);
     z-index: 2;
-    .border-wrapper {
-      transform: skew(0, -10deg);
-    }
   }
 }

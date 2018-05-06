@@ -1,0 +1,19 @@
+// Makes an element render at at an angle while offsetting
+// that angel in its immediate children. Thus, allowing the
+// background to appear diagonally.
+@mixin diagonal-background($slope: 10deg,
+                           $offset-top: 0rem,
+                           $offset-bottom: 0rem) {
+  padding-top: 6rem + $offset-top;
+  padding-bottom: 6rem + $offset-bottom;
+  transform: skew(0, $slope);
+  #{selector_append("& > *")} {
+    @if $slope > 0deg {
+      transform: skew(0, -#{$slope});
+    } @else if $slope < 0deg {
+      transform: skew(0, #{abs($slope)});
+    } @else {
+      @warn "Defined a diagonal background with a neutral slope";
+    }
+  }
+}

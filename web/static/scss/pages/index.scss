@@ -14,7 +14,7 @@
     }
     &.cloud {
       grid-area: cloud;
-      .border-wrapper {
+      .stripe-offset {
         display: grid;
         grid-template-areas:
           'desc'
