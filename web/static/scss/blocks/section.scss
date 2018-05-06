@@ -13,13 +13,13 @@
 
   &.design {
     @include diagonal-background(10deg, -2rem, -2rem);
-    @include grad-up-right(lighten($blue, 50%), lighten($blue, 20%));
+    @include grad-down-right(lighten($blue, 50%), lighten($blue, 20%));
     z-index: 2;
   }
 
   &.frameworks {
     @include diagonal-background(-20deg, 5rem, 5rem);
-    @include grad-up-right(get-color(red, light), get-color(orange, light));
+    @include grad-up-right(get-color(orange, light), get-color(red, light));
     z-index: 1;
   }
 
